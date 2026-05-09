@@ -4,13 +4,299 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smartspot | The Smarter Way to Find Your Space</title>
-    <link rel="stylesheet" href="style.css" />
+    <link
+      class="icon"
+      rel="icon"
+      type="image/x-icon"
+      href="images/dravionlogo.png"
+    />
+    <style>
+      .icon {
+        border-radius: 60%;
+      }
+
+      :root {
+        --primary-glow: #121d4b;
+        --bg-dark: #0e1f3eaf;
+        --card-bg: #081531;
+        --text-light: #f1f5f9;
+        --accent-pink: #172551;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+
+      body {
+        background-color: var(--bg-dark);
+        color: var(--text-light);
+        line-height: 1.6;
+      }
+
+
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 5%;
+        background: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        border-bottom: 1px solid #333;
+      }
+
+      .logo-container img {
+        height: 65px;
+        width: 65px;
+        display: block;
+        border-radius: 50%;
+      }
+
+      .nav a {
+        margin-left: 25px;
+        text-decoration: none;
+        color: var(--text-light);
+        font-size: 15px;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav a:hover {
+        color: var(--accent-pink);
+      }
+
+
+      .hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 80px 5%;
+        flex-wrap: wrap;
+        gap: 40px;
+        background: radial-gradient(circle at top right, #0b1a49, #000000);
+      }
+
+      .hero-text {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .hero-text h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        line-height: 1.1;
+        margin-bottom: 20px;
+        background: linear-gradient(to right, #fff, var(--accent-pink));
+        background-clip: text;
+        -webkit-text-fill-color: transparent;re
+      }
+
+      .hero-image {
+        flex: 1;
+        min-width: 300px;
+        height: 400px;
+        background: url("https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&q=80&w=1000")
+          center/cover;
+        border-radius: 20px;
+        box-shadow: 0 0 30px rgba(216, 150, 255, 0.2);
+      }
+
+      .btn {
+        padding: 15px 35px;
+        background: var(--accent-pink);
+        color: black;
+        border: none;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(216, 150, 255, 0.4);
+      }
+
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+        padding: 40px 5%;
+      }
+
+      .stat {
+        background: var(--card-bg);
+        padding: 30px;
+        text-align: center;
+        border-radius: 15px;
+        border: 1px solid #333;
+        transition: border-color 0.3s;
+      }
+
+      .stat:hover {
+        border-color: var(--accent-pink);
+      }
+
+      .stat h3 {
+        font-size: 2.5rem;
+        color: var(--accent-pink);
+        margin-bottom: 5px;
+      }
+
+      /* CARDS */
+      .section {
+        padding: 60px 5%;
+      }
+
+      .section-title {
+        margin-bottom: 30px;
+        font-size: 1.8rem;
+        border-left: 4px solid var(--accent-pink);
+        padding-left: 15px;
+      }
+
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+      }
+
+      .card {
+        background: var(--card-bg);
+        padding: 20px;
+        border-radius: 15px;
+        border: 1px solid #333;
+      }
+
+      .card-img {
+        height: 180px;
+        background: #222;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        background-size: cover;
+        background-position: center;
+      }
+
+
+      .map {
+        margin-top: 40px;
+        height: 350px;
+        background: linear-gradient(45deg, #111, #1a1a1a);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px dashed #444;
+        color: #888;
+      }
+
+
+      @media (max-width: 768px) {
+        .navbar {
+          padding: 15px 20px;
+        }
+        .nav {
+          display: none;
+        }
+        .hero {
+          text-align: center;
+        }
+      }
+
+      .logo-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .brand-name {
+        font-size: 24px;
+        font-weight: bold;
+        color: #0866a0;
+      }
+
+      .footer {
+        background: #9c9696;
+        padding: 50px 5% 20px;
+        color: var(--text-light);
+        border-top: 1px solid #333;
+      }
+
+      .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .footer-about,
+      .footer-links,
+      .footer-socialmedia {
+        flex: 1;
+        min-width: 220px;
+      }
+
+      .footer h3,
+      .footer h4 {
+        margin-bottom: 15px;
+        color: var(--accent-pink);
+      }
+
+      .footer p {
+        color: #252020;
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+
+      .footer ul {
+        list-style: none;
+      }
+
+      .footer ul li {
+        margin-bottom: 10px;
+      }
+
+      .footer a {
+        text-decoration: none;
+        color: #2b3d4c;
+        transition: 0.3s;
+        font-size: 0.95rem;
+      }
+
+      .footer a:hover {
+        color: var(--accent-pink);
+      }
+
+      .social-icons a {
+        margin-right: 15px;
+        display: inline-block;
+      }
+
+      .footer-bottom {
+        text-align: center;
+        margin-top: 40px;
+        padding-top: 20px;
+        border-top: 1px solid #333;
+        font-size: 0.85rem;
+        color: #08425f;
+      }
+    </style>
   </head>
   <body>
     <!-- NAVBAR -->
     <nav class="navbar">
       <div class="logo-container">
-        <img src="images/logo.png" alt="SmartSpot Logo" />
+        <img src="images/carlogo.png" alt="SmartSpot Logo" />
         <span class="brand-name">SmartSpot</span>
       </div>
 
@@ -23,13 +309,12 @@
       </div>
     </nav>
 
-    <!-- HERO -->
     <header class="hero">
       <div class="hero-text">
         <h1>PARKING <br />REIMAGINED.</h1>
         <p>
-          Experience the future of urban mobility with Dravion. Real-time
-          tracking, instant booking, and seamless navigation.
+          Use SmartSpot to find parking fast with live tracking and easy
+          booking.
         </p>
         <br />
         <button class="btn">Find a Spot Now</button>
@@ -37,18 +322,18 @@
       <div class="hero-image"></div>
     </header>
 
-    <!-- STATS -->
+    <!-- stats -->
     <section class="stats">
       <div class="stat">
         <h3>120</h3>
         <p>Total Slots</p>
       </div>
       <div class="stat">
-        <h3 style="color: #4ade80">75</h3>
+        <h3 style="color: #1d3b5f">75</h3>
         <p>Available Now</p>
       </div>
       <div class="stat">
-        <h3 style="color: #f87171">40</h3>
+        <h3 style="color: #0d41a0cb">40</h3>
         <p>Occupied</p>
       </div>
       <div class="stat">
@@ -57,7 +342,6 @@
       </div>
     </section>
 
-    <!-- POPULAR -->
     <section class="section">
       <h3 class="section-title">Popular Parking Hubs</h3>
 
@@ -131,5 +415,42 @@
         <small>Loading real-time GPS data...</small>
       </div>
     </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-about">
+          <h3>SmartSpot</h3>
+          <p>
+            Making Taungoo a smarter, cleaner city through electric transport
+            and better parking.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Project</a></li>
+            <li><a href="#">Our Research</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-socialmedia">
+          <h4>Follow Our Progress</h4>
+          <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 SmartSpot | Designed by Year 8 Students. All Right
+          Reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
