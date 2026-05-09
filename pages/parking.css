@@ -1,0 +1,113 @@
+.parking-page {
+  background-color: #0a0a0a;
+  color: white;
+  padding: 20px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.circle-logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #444;
+}
+
+.brand-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.simple-nav {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.simple-nav a {
+  color: #60a5fa;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.simple-nav a.active {
+  color: #12255f;
+  text-decoration: underline;
+}
+
+.filter-area {
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: #1a1a1a;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.filter-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-controls select,
+.filter-btn {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background: #e0e0e0;
+  color: black;
+}
+
+.parking-results {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.parking-entry {
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+}
+
+.parking-entry h2 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.address,
+.hours {
+  color: #ccc;
+  margin: 5px 0;
+}
+
+.entry-status {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.available {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.details-btn {
+  background: #e0e0e0;
+  border: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
