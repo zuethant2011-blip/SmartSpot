@@ -30,57 +30,51 @@
     </nav>
     <!-- Navbar Ends  -->
 
-    <!-- Header Starts -->
-    <header class="header-box">
-      <div class="header-text">
-        <h1>PARKING <br />REIMAGINED.</h1>
-        <p>Use SmartSpot to find parking fast with easy booking.</p>
-        <br />
-        <a href="/pages/parking.html" class="main-btn">Find a Spot Now</a>
-      </div>
-      <div
-        class="header-image"
-        style="background-color: #222; border: 1px dashed #444"
-      ></div>
-    </header>
-    <!-- Header Ends -->
+    <!-- Main content starts here -->
 
-    <section class="content-area">
-      <h3 class="title-text">Popular Parking Hubs</h3>
+    <main class="auth-container">
+      <div class="auth-card">
+        <div class="auth-header">
+          <h2>Welcome Back</h2>
+          <p>Login to manage your parking spots</p>
+        </div>
 
-      <div class="box-card">
-        <div class="box-img" style="background-image: url('/images/lottlehotel.webp')"></div>
-        <h4>Lotte Hotel Car Parking</h4>
-        <p style="color: #888; font-size: 0.9rem; margin: 10px 0">
-          Premium covered parking with 24/7 security.
-        </p>
-        <a href="/pages/parking.html" class="main-btn" style="padding: 8px 15px; font-size: 12px">
-          Reserve
-        </a>
-      </div>
+        <form class="auth-form">
+          <div class="input-group">
+            <label for="email">Email Address</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="name@example.com"
+              required
+            />
+          </div>
 
-      <div class="box-card">
-        <div class="box-img" style="background-image: url('/images/Junctioncity.jpg')"></div>
-        <h4>Junction City Parking</h4>
-        <p style="color: #888; font-size: 0.9rem; margin: 10px 0">
-          EV charging stations available at this location.
-        </p>
-        <a href="/pages/parking.html" class="main-btn" style="padding: 8px 15px; font-size: 12px">
-          Reserve
-        </a>
-      </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="••••••••"
+              required
+            />
+          </div>
 
-      <div class="box-card">
-        <div class="box-img" style="background-image: url('/images/junctionsquare.jpg')"></div>
-        <h4>Junction Square Parking</h4>
-        <p style="color: #888; font-size: 0.9rem; margin: 10px 0">
-          Long-term parking with shuttle services.
-        </p>
-        <a href="/pages/parking.html" class="main-btn" style="padding: 8px 15px; font-size: 12px">
-          Reserve
-        </a>
+          <div class="auth-options">
+            <label><input type="checkbox" /> Remember me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="main-btn auth-btn">Sign In</button>
+        </form>
+
+        <div class="auth-footer">
+          <p>Don't have an account? <a href="/pages/signup.html">Create one</a></p>
+        </div>
       </div>
-    </section>
+    </main>
+
+    <!-- Main content ends here -->
 
     <footer class="footer">
       <div class="footer-container">
