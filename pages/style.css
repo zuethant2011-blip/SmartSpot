@@ -18,6 +18,54 @@ body {
   width: 50px;
 }
 
+.how-smartspot-works {
+  padding: 80px 5%;
+  background: #0e1f3e;
+}
+.works-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.works-container h2 {
+  font-size: 38px;
+  color: white;
+  margin-bottom: 15px;
+}
+.works-intro {
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  font-size: 16px;
+}
+.works-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.works-card {
+  background: #081531;
+  border: 1px solid #1e293b;
+  padding: 35px 25px;
+  border-radius: 20px;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+.works-card:hover {
+  transform: translateY(-5px);
+  border-color: #3b82f6;
+}
+.works-card h3 {
+  color: #3b82f6;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.works-card p {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 /* Navbar Starts */
 .top-bar {
   display: flex;
@@ -661,5 +709,246 @@ body {
     grid-template-columns: 1fr;
     gap: 5px;
     padding: 10px 5px;
+  }
+}
+
+/* ==========================================================================
+   New Layout Additions: Chart, AI Camera, and Before/After Reviews
+   ========================================================================== */
+
+/* Section Alignment Global Layout */
+.efficiency-section,
+.camera-detection-section,
+.reviews-section {
+  margin-bottom: 100px;
+}
+
+.section-title-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title-box h2 {
+  font-size: 38px;
+  color: white;
+  margin: 10px 0;
+}
+
+/* --- Pure CSS Chart Styling --- */
+.chart-container {
+  background: #081531;
+  border: 1px solid #1e293b;
+  border-radius: 25px;
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.chart-container h3 {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #94a3b8;
+}
+
+.bar-chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 250px; /* Base height for column references */
+  border-bottom: 2px solid #334155;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.chart-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.bar-wrapper {
+  height: 200px; /* Constrains column growth scale */
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bar {
+  width: 80px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  align-items: top;
+  justify-content: center;
+  padding-top: 10px;
+  transition: all 0.6s ease-in-out;
+  position: relative;
+}
+
+.before-bar {
+  background: linear-gradient(to top, #ef4444, #f87171);
+  box-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+.after-bar {
+  background: linear-gradient(to top, #22c55e, #4ade80);
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.3);
+}
+
+.bar-value {
+  font-weight: bold;
+  color: white;
+  font-size: 1.1rem;
+}
+
+.bar-label {
+  margin-top: 12px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  font-weight: 600;
+}
+
+/* --- Smart Camera CSS Mockup Layout --- */
+.camera-visual-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.camera-monitor {
+  width: 100%;
+  max-width: 450px;
+  height: 280px;
+  background-color: #040d21;
+  border: 4px solid #1e293b;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.8);
+}
+
+.live-tag {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(239, 68, 68, 0.8);
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  animation: pulse 1.5s infinite alternate;
+}
+
+/* Matrix Line Effect Scan Simulation */
+.ai-scanning-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 1px dashed rgba(59, 130, 246, 0.3);
+}
+
+.scan-line {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #3b82f6, transparent);
+  position: absolute;
+  animation: scanMove 3s infinite linear;
+}
+
+.target-car-box {
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  width: 60%;
+  height: 35%;
+  border: 2px solid #ef4444;
+  background: rgba(239, 68, 68, 0.05);
+  border-radius: 4px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.alert-tag {
+  color: #ef4444;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.plate-text {
+  color: #ffffff;
+  font-family: monospace;
+  font-size: 13px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2px 5px;
+  border-radius: 3px;
+  width: fit-content;
+}
+
+/* --- Before / After Review Enhancements --- */
+.review-card {
+  width: 340px !important; /* Forces a wider comment read layout */
+  position: relative;
+  padding-top: 45px !important;
+  text-align: left !important;
+}
+
+.review-status-badge {
+  position: absolute;
+  top: -12px;
+  left: 25px;
+  padding: 6px 14px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50px;
+  color: white;
+}
+
+.before-badge {
+  background-color: #ef4444;
+  border: 1px solid #f87171;
+}
+
+.after-badge {
+  background-color: #22c55e;
+  border: 1px solid #4ade80;
+}
+
+.user-role {
+  font-size: 13px !important;
+  color: #3b82f6 !important;
+  margin-bottom: 15px;
+}
+
+.review-quote {
+  font-style: italic;
+  color: #cbd5e1 !important;
+  line-height: 1.5;
+}
+
+/* Keyframe Animations */
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes scanMove {
+  0% {
+    top: 0%;
+  }
+  50% {
+    top: 100%;
+  }
+  100% {
+    top: 0%;
   }
 }
