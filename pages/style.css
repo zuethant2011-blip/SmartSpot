@@ -261,8 +261,10 @@ body {
   direction: ltr;
 }
 
-.about-image img {
-  width: 100%;
+.about-image img,
+.about-image2 img {
+  width: 60%;
+  height: 50%;
   border-radius: 20px;
   border: 1px solid #1e293b;
 }
@@ -563,4 +565,77 @@ body {
   color: #3b82f6;
   text-decoration: none;
   font-weight: bold;
+}
+
+.content-area {
+  padding: 50px 5%;
+}
+
+
+.title-text {
+  margin-bottom: 25px;
+  border-left: 4px solid #3b82f6;
+  padding-left: 15px;
+  color: #ffffff;
+  font-size: 28px;
+}
+
+
+.box-card {
+  background: #081531;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #1e293b;
+  margin-bottom: 35px;
+}
+
+.box-card h3 {
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.box-card p {
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+
+.table-container {
+  overflow-x: auto;
+}
+
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: #0c1f4a;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.compare-table th {
+  background-color: #1e293b;
+  color: #3b82f6;
+  padding: 14px 18px;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 2px solid #081531;
+}
+
+
+.compare-table td {
+  padding: 14px 18px;
+  color: #cbd5e1;
+  border-bottom: 1px solid #1e293b;
+  font-size: 15px;
+}
+
+
+.compare-table td strong {
+  color: #ffffff;
+}
+.compare-table td.positive-impact {
+  color: #10b981;
+  font-weight: 500;
 }
